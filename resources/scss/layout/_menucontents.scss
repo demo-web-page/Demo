@@ -1,0 +1,278 @@
+@import "compass/typography/vertical_rhythm";
+@import "compass/layout/sticky-footer";
+@import "compass/css3/images";
+
+
+@include sticky-footer(54px);  
+
+
+#menu-content-wrapper{
+	@include size;
+}
+%section-header{
+	font-weight: bold;
+	font-size: $base-line-height;
+	color: $green1;
+	width: 86%;
+	text-decoration: underline;
+}
+
+#content{
+	#menu-content-wrapper{
+		@include alignment(left, 78%);
+		padding: 15px;
+		height: 80%;
+		padding-top: 80px;
+
+		#scripting-wrapper{
+			header{
+				color: $greyshade3;
+				font-weight: bold;
+				font-size: $fontsize22;
+				text-decoration: underline;				
+			}
+			ul{
+				li{
+					h2{
+						color: $green1 !important;
+						font-weight: bold;
+					}
+					color: $greyshade3;
+				}
+			}
+			.sub-header{
+				color: $green1;
+				text-align: left;
+				margin: 50px 0 0 40px;
+			}
+		}
+
+		#browse-wrapper{	
+			p{
+				color: $greyshade3;
+				text-align: left;
+				width: 89%;
+				margin: 0 auto;
+				margin-top: 15px;
+			}		
+			ul{
+				li{
+					line-height: 2;
+					cursor: pointer;
+
+					a{
+						&:hover{
+							color: $white;
+						}
+					}
+					img{
+						width: 20px;
+						float: right;
+						cursor: pointer;	
+					}
+				}
+			}
+			ul:nth-child(1){
+				li{
+					@include selectMenu($skyblue);
+				}
+			}
+			ul:nth-child(2){
+				li{
+					@include selectMenu($skyblue);
+				}
+			}
+			ul:nth-child(3){
+				li{
+					@include selectMenu($skyblue);
+				}
+			}
+		}
+
+		#styling-comp-Wrapper{
+			section{
+				@include alignment(left,32%);
+
+				h2{
+					font-weight: normal;
+					color: $greyshade3;
+					font-size: $fontsize20;
+					margin-bottom: 2px;
+					border-bottom: 1px solid $greyshade2;
+					width: 90%;
+					text-align: left;
+					margin-left: 9%;
+				}
+				.each-style-wrapper{
+					color: $greyshade3;
+					text-align: left;
+					width: 73%;
+    				margin-left: 9%;
+				}
+			}
+		}
+
+		#frameworks-wrapper{
+			text-align: left;
+
+			ul{
+				li{
+					list-style-type: none;
+					margin-top: 5%;
+					text-align: left;
+					@include size(88%);
+					overflow-x: visible;
+
+					header{
+						padding: 5px 8px !important;
+						margin-top: -24px;
+						text-align: left;
+						font-size: $fontsize20;
+						font-weight: normal;
+						@include bg-gradient;
+
+						span{
+							width: 10px;
+							padding: 2px 8px;
+							border-radius: 25px;
+							background-color: #FFF;
+							color: $greyshade3;
+							margin-right: 2%;
+						}
+					}
+
+					p{
+						color: $greyshade3;
+						width: 90%;						
+						overflow: hidden;
+						text-overflow: ellipsis;
+						a{
+							cursor: pointer;
+							color: $orange;
+						}
+					}
+				}
+			}
+		}
+		#styling-content-wrapper{
+			h1{
+				color: $greyshade3 !important;
+				font-weight: bold;
+				text-decoration: underline;
+			}
+			#css-prepro-list{
+				@include size(68%);
+				text-align: center;
+			    margin: 0 auto;
+			    height: 50px;
+				@include bg-gradient($greyshade2,$greyshade1);
+				border: none;
+
+				li{
+					list-style-type: none;
+					font-size: $fontsize22;
+					float:left;
+					margin-left: 10%;
+					border: none;
+					text-decoration: underline;
+
+					a{
+						color: $green1;	
+						&:hover{
+							color: $greyshade3;
+						}					
+					}
+				}
+			}
+			#each-css-prepro{
+				@include size;
+				text-align: center;
+			    margin: 0 auto;
+			    float: left;
+			    color: $greyshade3;
+			    margin-top: 8px;
+			    margin-left: 7%;
+
+				li{
+					list-style-type: none;
+					font-size: $fontsize20;
+					text-align: left;
+					span{
+						color: $green1;	
+						font-size: $fontsize20;				
+					}
+				}
+			}
+		}
+		#scss-content-wrapper{
+			text-align: left;
+
+			ul{
+				li{
+					list-style-type: none;
+					color: $greyshade3;
+
+					header{
+						@extend %section-header;
+					}
+				}
+			}
+			#scss-content-listing{
+					width: 20%;
+					float: left;
+
+				li{
+					list-style-type: circle;
+					@include list-style(circle);
+					font-size: 18px;
+					text-decoration: underline;
+				}
+			}
+			#each-prop{
+					float: right;
+				    width: 70%;
+				    margin-top: -16px;
+			}
+		}
+		#compass-content-wrapper{
+			header{
+				text-align: left;				
+				a{
+					@extend %section-header;
+					margin-left: 24px;				
+				}
+			}
+			ul{
+				li{
+					color: $greyshade3;
+				}
+			}
+		}
+		.sass-section-wrapper{
+			@include each-css-section;
+		}
+		.scss-section-wrapper{
+			@include each-css-section($greyshade2);
+			@include border-radius(4px, 8px);
+			@include box-sizing(content-box);
+		}
+	}
+}
+footer{
+	@include sticky-footer(54px);
+	background-color: $greyshade1;
+}
+
+.more-link{
+	cursor: pointer;
+	color: $orange;
+	font-weight: bold;
+	text-align:left;
+	margin-left: 40px;
+}
+.short-display{
+	white-space: nowrap;
+}
+.normal-display{
+	white-space: normal;
+}

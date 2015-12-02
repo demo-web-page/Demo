@@ -1,0 +1,24 @@
+{
+	"records": [
+		{
+			"name" : "Alfreds Futterkiste",
+   			"city" : "Berlin",
+    		"country" : "Germany"
+		},{
+			"name" : "Berglunds snabbköp",
+		    "city" : "Luleå",
+		    "country" : "Sweden"
+		}
+	],
+	"tables": [
+		{
+			"org" : "Alfreds Futterkiste",
+   			"designation" : "Berlin",
+    		"country" : "Germany"
+		},{
+			"org" : "Alfreds Futterkiste",
+   			"designation" : "Berlin",
+    		"country" : "Germany"
+		}
+	]
+}
